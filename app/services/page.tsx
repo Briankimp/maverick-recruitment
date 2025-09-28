@@ -1,3 +1,4 @@
+"use client"
 import { Navigation } from "@/components/navigation"
 import { ResourceCard } from "@/components/resource-card"
 import { CVUpload } from "@/components/cv-upload"
@@ -6,6 +7,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BookOpen, MessageCircle, Calendar, FileText, Target, Star, ArrowRight } from "lucide-react"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 
 const resources = [
   {
@@ -108,17 +110,28 @@ export default function ServicesPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 group">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 group"
+                onClick={() => {
+                  document.getElementById('career-resources')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Explore Resources
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
+              <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-accent text-accent hover:bg-accent/10 bg-transparent"
+              //  onClick={() => {
+              //     doc ument.getElementById('consultation-cta')?.scrollIntoView({ behavior: 'smooth' });
+              //   }}
               >
                 Book Consultation
-              </Button>
+                </Button>
+                </Link>
             </div>
 
             {/* Stats */}
@@ -183,7 +196,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Resources Section */}
-      <section className="py-16 bg-muted/30">
+      <section id="career-resources" className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Career Resources</h2>
@@ -207,11 +220,11 @@ export default function ServicesPage() {
       </section>
 
       {/* CV Upload Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <CVUpload />
         </div>
-      </section>
+      </section> */}
 
       {/* Success Stories */}
       <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
@@ -265,7 +278,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section id="consultation-cta" className="py-16 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">Ready to Advance Your Career?</h2>
@@ -288,7 +301,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

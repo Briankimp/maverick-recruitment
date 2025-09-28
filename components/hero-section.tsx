@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, Users, Briefcase, TrendingUp, Star } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -30,17 +31,22 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 group">
-                Find Your Dream Job
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
-              >
-                Hire Top Talent
-              </Button>
+              <Link href="/jobs">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 group">
+                  Find Your Dream Job
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/employers">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground bg-transparent"
+                >
+                  Hire Top Talent
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}
@@ -106,7 +112,7 @@ export function HeroSection() {
             </Card>
 
             {/* Testimonial */}
-            <Card className="p-6 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
+            {/* <Card className="p-6 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
               <div className="flex items-center space-x-1 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
@@ -117,7 +123,7 @@ export function HeroSection() {
                 expertise made all the difference."
               </p>
               <div className="text-sm font-medium">Sarah Johnson, Marketing Manager</div>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>

@@ -25,9 +25,12 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">Stay Updated with Career Opportunities</h3>
+              <h3 className="text-2xl font-bold">
+                Stay Updated with Career Opportunities
+              </h3>
               <p className="text-primary-foreground/80 text-pretty">
-                Get the latest job openings, career tips, and industry insights delivered to your inbox weekly.
+                Get the latest job openings, career tips, and industry insights
+                delivered to your inbox weekly.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -49,18 +52,19 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex  items-center space-x-3">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo1.png"
                 alt="Maverick Recruitment Agency"
-                width={40}
+                width={100}
                 height={40}
-                className="rounded-full"
+                className="rounded-full bg-blue-50"
               />
-              <span className="font-bold text-xl">Maverick</span>
+              {/* <span className="font-bold text-xl">Maverick Recruitment</span> */}
             </Link>
             <p className="text-primary-foreground/80 text-sm text-pretty">
-              Kenya's leading recruitment agency, connecting exceptional talent with innovative companies since 2018.
+              Global recruitment agency, connecting exceptional talent with
+              innovative companies since 2021.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
@@ -69,11 +73,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone className="w-4 h-4 text-accent" />
-                <span>+254 700 123 456</span>
+                <span>+254 705078298</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="w-4 h-4 text-accent" />
-                <span>hello@maverick.co.ke</span>
+                <span>info@maverickrecruitment.co.ke</span>
               </div>
             </div>
           </div>
@@ -86,35 +90,53 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/jobs" className="hover:text-accent transition-colors">
+                <Link
+                  href="/jobs"
+                  className="hover:text-accent transition-colors"
+                >
                   Browse Jobs
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-accent transition-colors">
+                <Link
+                  href="/services"
+                  className="hover:text-accent transition-colors"
+                >
                   Career Resources
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-accent transition-colors">
+                <Link
+                  href="/services"
+                  className="hover:text-accent transition-colors"
+                >
                   CV Review
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-accent transition-colors">
+                <Link
+                  href="/services"
+                  className="hover:text-accent transition-colors"
+                >
                   Interview Coaching
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-accent transition-colors">
+                <Link
+                  href="/services"
+                  className="hover:text-accent transition-colors"
+                >
                   Career Consultation
                 </Link>
               </li>
-              <li>
-                <Link href="/services" className="hover:text-accent transition-colors">
+              {/* <li>
+                <Link
+                  href="/services"
+                  className="hover:text-accent transition-colors"
+                >
                   Upload CV
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -126,32 +148,50 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/employers" className="hover:text-accent transition-colors">
+                <Link
+                  href="/employers"
+                  className="hover:text-accent transition-colors"
+                >
                   Hire Talent
                 </Link>
               </li>
               <li>
-                <Link href="/employers" className="hover:text-accent transition-colors">
+                <Link
+                  href="/employers"
+                  className="hover:text-accent transition-colors"
+                >
                   Executive Search
                 </Link>
               </li>
-              <li>
-                <Link href="/employers" className="hover:text-accent transition-colors">
+              {/* <li>
+                <Link
+                  href="/employers"
+                  className="hover:text-accent transition-colors"
+                >
                   Volume Recruitment
                 </Link>
-              </li>
-              <li>
-                <Link href="/employers" className="hover:text-accent transition-colors">
+              </li> */}
+              {/* <li>
+                <Link
+                  href="/employers"
+                  className="hover:text-accent transition-colors"
+                >
                   Specialized Roles
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="/employers" className="hover:text-accent transition-colors">
+                <Link
+                  href="/employers"
+                  className="hover:text-accent transition-colors"
+                >
                   Consultation
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-accent transition-colors"
+                >
                   Request Quote
                 </Link>
               </li>
@@ -166,22 +206,34 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/about" className="hover:text-accent transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-accent transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-accent transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-accent transition-colors"
+                >
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-accent transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-accent transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-accent transition-colors"
+                >
                   Office Location
                 </Link>
               </li>
@@ -229,7 +281,10 @@ export function Footer() {
                 <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp Us
               </Button>
-              <Button size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button
+                size="sm"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </Button>
@@ -243,8 +298,8 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
             <div>
-              © 2025 Maverick Recruitment Agency. All rights reserved. | Connecting talent with opportunity across East
-              Africa.
+              © 2025 Maverick Recruitment Agency. All rights reserved. |
+              Connecting talent with opportunity across the Globe.
             </div>
             <div className="flex items-center space-x-6">
               <Link href="#" className="hover:text-accent transition-colors">
@@ -261,5 +316,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

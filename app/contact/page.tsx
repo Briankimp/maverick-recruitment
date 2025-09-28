@@ -22,7 +22,7 @@ const contactMethods = [
     icon: <Phone className="w-6 h-6 text-primary" />,
     title: "Phone",
     description: "Speak directly with our team",
-    contact: "+254 700 123 456",
+    contact: "+254 705078298",
     action: "Call Now",
     available: "Mon-Fri, 8AM-6PM",
   },
@@ -30,7 +30,7 @@ const contactMethods = [
     icon: <Mail className="w-6 h-6 text-accent" />,
     title: "Email",
     description: "Send us a detailed message",
-    contact: "hello@maverick.co.ke",
+    contact: "info@maverickrecruitment.co.ke",
     action: "Send Email",
     available: "24/7 Response",
   },
@@ -38,7 +38,7 @@ const contactMethods = [
     icon: <MessageCircle className="w-6 h-6 text-orange" />,
     title: "WhatsApp",
     description: "Quick chat for urgent matters",
-    contact: "+254 700 123 456",
+    contact: "+254 705078298",
     action: "Chat Now",
     available: "Mon-Fri, 8AM-8PM",
   },
@@ -48,7 +48,7 @@ const officeInfo = [
   {
     icon: <MapPin className="w-5 h-5 text-primary" />,
     label: "Address",
-    value: "Muthaiga Shopping Centre, Nairobi, Kenya",
+    value: "Muthaiga, Nairobi, Kenya",
   },
   {
     icon: <Clock className="w-5 h-5 text-accent" />,
@@ -58,25 +58,25 @@ const officeInfo = [
   {
     icon: <Phone className="w-5 h-5 text-orange" />,
     label: "Main Line",
-    value: "+254 700 123 456",
+    value: "+254 705078298",
   },
   {
     icon: <Mail className="w-5 h-5 text-primary" />,
     label: "General Inquiries",
-    value: "hello@maverick.co.ke",
+    value: "info@maverickrecruitment.co.ke",
   },
-]
+];
 
 const departments = [
   {
     name: "Job Seekers",
-    email: "careers@maverick.co.ke",
+    email: "careers@maverickrecruitment.co.ke",
     description: "CV submissions, career guidance, job applications",
     icon: "👤",
   },
   {
     name: "Employers",
-    email: "employers@maverick.co.ke",
+    email: "employers@maverickrecruitment.co.ke",
     description: "Hiring needs, recruitment services, consultations",
     icon: "🏢",
   },
@@ -114,7 +114,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 group">
                 Schedule a Call
                 <Calendar className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -126,7 +126,7 @@ export default function ContactPage() {
               >
                 Send a Message
               </Button>
-            </div>
+            </div> */}
 
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 max-w-2xl mx-auto">
@@ -139,7 +139,7 @@ export default function ContactPage() {
                 <div className="text-sm text-muted-foreground">Client Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange">6</div>
+                <div className="text-3xl font-bold text-orange">5</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
               </Card>
 
               {/* Map Placeholder */}
-              <Card className="p-8 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
+              {/* <Card className="p-8 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center">
                   <div className="text-center space-y-2">
                     <MapPin className="w-16 h-16 text-primary mx-auto" />
@@ -226,14 +226,14 @@ export default function ContactPage() {
                     <p className="text-xs text-muted-foreground">Muthaiga Shopping Centre, Nairobi</p>
                   </div>
                 </div>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Department Contacts */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Contact by Department</h2>
@@ -256,10 +256,10 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
+      {/* <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
@@ -297,10 +297,10 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
+      {/* <section className="py-16 bg-primary text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">Ready to Get Started?</h2>
@@ -323,7 +323,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

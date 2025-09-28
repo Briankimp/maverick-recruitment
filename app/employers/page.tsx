@@ -1,3 +1,4 @@
+"use client";
 import { Navigation } from "@/components/navigation"
 import { ServiceCard } from "@/components/service-card"
 import { ConsultationForm } from "@/components/consultation-form"
@@ -50,32 +51,32 @@ const services = [
   },
 ]
 
-const testimonials = [
-  {
-    name: "Sarah Mitchell",
-    role: "HR Director",
-    company: "TechCorp Kenya",
-    content:
-      "Maverick helped us build our entire engineering team in just 3 months. Their understanding of the tech landscape in Kenya is unmatched.",
-    rating: 5,
-  },
-  {
-    name: "David Ochieng",
-    role: "CEO",
-    company: "FinanceFirst Ltd",
-    content:
-      "The quality of candidates they presented was exceptional. We hired 5 people through them and all are still with us 2 years later.",
-    rating: 5,
-  },
-  {
-    name: "Grace Wanjiku",
-    role: "Operations Manager",
-    company: "Retail Solutions",
-    content:
-      "Professional, efficient, and results-driven. They understood our company culture and found candidates who fit perfectly.",
-    rating: 5,
-  },
-]
+// const testimonials = [
+//   {
+//     name: "Sarah Mitchell",
+//     role: "HR Director",
+//     company: "TechCorp Kenya",
+//     content:
+//       "Maverick helped us build our entire engineering team in just 3 months. Their understanding of the tech landscape in Kenya is unmatched.",
+//     rating: 5,
+//   },
+//   {
+//     name: "David Ochieng",
+//     role: "CEO",
+//     company: "FinanceFirst Ltd",
+//     content:
+//       "The quality of candidates they presented was exceptional. We hired 5 people through them and all are still with us 2 years later.",
+//     rating: 5,
+//   },
+//   {
+//     name: "Grace Wanjiku",
+//     role: "Operations Manager",
+//     company: "Retail Solutions",
+//     content:
+//       "Professional, efficient, and results-driven. They understood our company culture and found candidates who fit perfectly.",
+//     rating: 5,
+//   },
+// ]
 
 export default function EmployersPage() {
   return (
@@ -99,17 +100,25 @@ export default function EmployersPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 group">
+                <Button 
+                  size="lg" 
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 group"
+                  onClick={() => {
+                    document.getElementById('consultation-form')?.scrollIntoView({ 
+                      behavior: 'smooth' 
+                    })
+                  }}
+                >
                   Start Hiring Now
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-                <Button
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="border-accent text-accent hover:bg-accent/10 bg-transparent"
                 >
                   View Success Stories
-                </Button>
+                </Button> */}
               </div>
 
               {/* Stats */}
@@ -137,12 +146,12 @@ export default function EmployersPage() {
                     <h3 className="text-2xl font-bold mb-2">Why Choose Maverick?</h3>
                   </div>
                   <div className="space-y-4">
-                    {[
-                      "Extensive candidate database",
+                    {[                    
                       "Industry expertise across sectors",
                       "Rigorous screening process",
-                      "Dedicated account management",
+                      "Dedicated team management",
                       "Competitive pricing",
+                      
                     ].map((benefit, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
@@ -233,7 +242,7 @@ export default function EmployersPage() {
             <p className="text-xl text-muted-foreground">Trusted by leading companies across Kenya</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="space-y-4">
@@ -252,12 +261,12 @@ export default function EmployersPage() {
                 </div>
               </Card>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Consultation Form Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
+      <section id="consultation-form" className="py-16 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ConsultationForm />
         </div>

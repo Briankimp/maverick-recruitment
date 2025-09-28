@@ -20,64 +20,64 @@ import {
 
 const teamMembers = [
   {
-    name: "Sarah Kimani",
+    name: " ",
     role: "Founder & CEO",
     bio: "15+ years in recruitment with expertise in executive search and talent acquisition across East Africa.",
     expertise: ["Executive Search", "Leadership", "Strategy"],
     image: "👩‍💼",
     linkedin: "#",
-    email: "sarah@maverick.co.ke",
+    email: "sarah@maverickrecruiters.co.ke",
   },
   {
-    name: "David Ochieng",
+    name: " ",
     role: "Head of Technology Recruitment",
     bio: "Former software engineer turned recruiter, specializing in tech talent acquisition and startup hiring.",
     expertise: ["Tech Recruitment", "Startups", "Software Engineering"],
     image: "👨‍💻",
     linkedin: "#",
-    email: "david@maverick.co.ke",
+    email: "david@maverickrecruitment.co.ke",
   },
   {
-    name: "Grace Wanjiku",
+    name: " ",
     role: "Senior Recruitment Consultant",
     bio: "Expert in finance and banking recruitment with a track record of placing senior professionals.",
     expertise: ["Finance", "Banking", "Senior Roles"],
     image: "👩‍💼",
     linkedin: "#",
-    email: "grace@maverick.co.ke",
+    email: "grace@maverickrecruitment.co.ke",
   },
   {
-    name: "Michael Mwangi",
+    name: " ",
     role: "Career Coach",
     bio: "Certified career coach helping professionals navigate career transitions and achieve their goals.",
     expertise: ["Career Coaching", "Interview Prep", "CV Writing"],
     image: "👨‍🏫",
     linkedin: "#",
-    email: "michael@maverick.co.ke",
+    email: "michael@maverickrecruitment.co.ke",
   },
 ]
 
 const milestones = [
   {
-    year: "2018",
+    year: "2021",
     title: "Company Founded",
-    description: "Started with a vision to transform recruitment in Kenya",
+    description: "Started with a vision to transform recruitment accross the Globe",
   },
   {
-    year: "2019",
+    year: "2022",
     title: "First 100 Placements",
     description: "Achieved our first major milestone in successful placements",
   },
   {
-    year: "2021",
+    year: "2023",
     title: "Regional Expansion",
     description: "Extended services across East Africa",
   },
-  {
-    year: "2023",
-    title: "Digital Transformation",
-    description: "Launched our comprehensive digital platform",
-  },
+  // {
+  //   year: "2023",
+  //   title: "Digital Transformation",
+  //   description: "Launched our comprehensive digital platform",
+  // },
   {
     year: "2024",
     title: "500+ Success Stories",
@@ -96,14 +96,14 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-slide-in-left">
               <div className="space-y-4">
-                <Badge className="bg-primary/10 text-primary border-primary/20">About Maverick</Badge>
+                <Badge className="bg-primary/10 text-primary border-primary/20">About Maverick Recruitment Agency</Badge>
                 <h1 className="text-4xl md:text-5xl font-bold text-balance leading-tight">
                   Transforming <span className="text-primary">Careers</span> and{" "}
                   <span className="text-accent">Companies</span>
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty">
-                  Since 2018, we've been Kenya's trusted recruitment partner, connecting exceptional talent with
-                  forward-thinking companies across East Africa.
+                  Since 2021, we've been a trusted recruitment partner, connecting exceptional talent with
+                  forward-thinking companies across the globe.
                 </p>
               </div>
 
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   <div className="text-sm text-muted-foreground">Partner Companies</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange">6</div>
+                  <div className="text-3xl font-bold text-orange">4</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
               </div>

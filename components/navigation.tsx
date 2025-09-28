@@ -22,7 +22,7 @@ export function Navigation() {
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-xl text-primary">Maverick</span>
+            <span className="font-bold text-xl text-primary">Maverick Agency</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,11 +65,11 @@ export function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* <div className="hidden md:block">
             <Button className="bg-accent text-accent-foreground hover:bg-accent/90 animate-pulse-glow">
               Get Started
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -118,9 +118,9 @@ export function Navigation() {
                 <Phone className="w-4 h-4" />
                 <span>Contact</span>
               </Link>
-              <div className="px-3 py-2">
+              {/* <div className="px-3 py-2">
                 <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Get Started</Button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

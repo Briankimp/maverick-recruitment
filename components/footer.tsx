@@ -258,10 +258,14 @@ export function Footer() {
               <span className="text-sm font-medium">Follow Us:</span>
               <div className="flex space-x-3">
                 <div className="p-2 bg-primary-foreground/10 rounded-full hover:bg-accent/20 transition-colors cursor-pointer">
-                  <Linkedin className="w-4 h-4" />
+                  <Link href="https://www.linkedin.com/company/maverick-recruitment-agency">
+                    <Linkedin className="w-4 h-4" />
+                  </Link>
                 </div>
                 <div className="p-2 bg-primary-foreground/10 rounded-full hover:bg-accent/20 transition-colors cursor-pointer">
-                  <Twitter className="w-4 h-4" />
+                  <Link href="https://x.com/Maverickkagency">
+                    <Twitter className="w-4 h-4" />
+                  </Link>
                 </div>
                 <div className="p-2 bg-primary-foreground/10 rounded-full hover:bg-accent/20 transition-colors cursor-pointer">
                   <Facebook className="w-4 h-4" />

@@ -25,3 +25,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# playground
+**/.change.md
+
+# company-documentation:
+**/SANITY_INTEGRATION_STANDARD.md
+**/SANITY_MIGRATION.md

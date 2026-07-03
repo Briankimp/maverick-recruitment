@@ -1,30 +1,59 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card } from "@/components/ui/card"
-import { Search, MapPin, Briefcase, DollarSign, Filter } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Card } from "@/components/ui/card";
+import { Search, MapPin, Briefcase, DollarSign, Filter } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface JobFiltersProps {
-  onFiltersChange: (filters: any) => void
+  initialFilters?: {
+    searchTerm?: string;
+    location?: string;
+    jobType?: string;
+    salaryRange?: string;
+  };
 }
 
-export function JobFilters({ onFiltersChange }: JobFiltersProps) {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [location, setLocation] = useState("")
-  const [jobType, setJobType] = useState("")
-  const [salaryRange, setSalaryRange] = useState("")
+export function JobFilters({ initialFilters }: JobFiltersProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const [searchTerm, setSearchTerm] = useState(
+    initialFilters?.searchTerm || "",
+  );
+  const [location, setLocation] = useState(initialFilters?.location || "");
+  const [jobType, setJobType] = useState(initialFilters?.jobType || "");
+  const [salaryRange, setSalaryRange] = useState(
+    initialFilters?.salaryRange || "",
+  );
 
   const handleSearch = () => {
-    onFiltersChange({
-      searchTerm,
-      location,
-      jobType,
-      salaryRange,
-    })
-  }
+    const params = new URLSearchParams();
+
+    if (searchTerm) params.set("search", searchTerm);
+    if (location) params.set("location", location);
+    if (jobType) params.set("type", jobType);
+    if (salaryRange) params.set("salary", salaryRange);
+
+    router.push(`/jobs?${params.toString()}`);
+  };
+
+  const handleClear = () => {
+    setSearchTerm("");
+    setLocation("");
+    setJobType("");
+    setSalaryRange("");
+    router.push("/jobs");
+  };
 
   return (
     <Card className="p-6 bg-card/50 backdrop-blur-sm">
@@ -91,26 +120,19 @@ export function JobFilters({ onFiltersChange }: JobFiltersProps) {
         </Select>
 
         {/* Search Button */}
-        <Button onClick={handleSearch} className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button
+          onClick={handleSearch}
+          className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+        >
           <Search className="w-4 h-4 mr-2" />
           Search Jobs
         </Button>
 
         {/* Clear Filters */}
-        <Button
-          variant="outline"
-          onClick={() => {
-            setSearchTerm("")
-            setLocation("")
-            setJobType("")
-            setSalaryRange("")
-            onFiltersChange({})
-          }}
-          className="w-full"
-        >
+        <Button variant="outline" onClick={handleClear} className="w-full">
           Clear Filters
         </Button>
       </div>
     </Card>
-  )
+  );
 }
